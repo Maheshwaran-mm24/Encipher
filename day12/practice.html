@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Display Tasks</title>
+  <style>
+
+    .block {
+      display: block;
+      background-color: lightblue;
+      margin: 10px 0;
+    }
+
+
+    .inline {
+      display: inline;
+      background-color: lightgreen;
+    }
+
+    .inline-block {
+      display: inline-block;
+      width: 150px;
+      height: 50px;
+      background-color: lightcoral;
+      margin: 10px;
+    }
+
+    .hide-display {
+      display: none;
+    }
+
+    .hide-visibility {
+      visibility: hidden;
+    }
+
+    .inline-to-block {
+      display: block;
+      background-color: yellow;
+      margin: 10px 0;
+    }
+
+    .block-to-inline {
+      display: inline;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Block, Inline, Inline-block</h2>
+  <div class="block">I am a Block element</div>
+  <span class="inline">I am Inline</span>
+  <span class="inline">I am Inline</span>
+  <br><br>
+  <div class="inline-block">Inline-Block 1</div>
+  <div class="inline-block">Inline-Block 2</div>
+
+  <h2>2. display: none</h2>
+  <p class="hide-display">You cannot see me (display:none)</p>
+  <p>This text is visible</p>
+
+  <h2>3. visibility: hidden</h2>
+  <p class="hide-visibility">I am hidden but space exists</p>
+  <p>This text appears below</p>
+
+  <h2>4. Convert Display Types</h2>
+  <span class="inline-to-block">Inline → Block</span>
+  <div class="block-to-inline">Block → Inline</div>
+  <div class="block-to-inline">Block → Inline</div>
+
+</body>
+</html>
