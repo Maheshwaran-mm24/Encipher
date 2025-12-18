@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>combinators</title>
+    <style>
+        div p{
+            color: rgb(255, 38, 0);
+        }
+        h1{
+            text-decoration: underline;
+        }
+
+        section > p{
+            color: rgb(204, 214, 24);
+        }
+
+        div + i{
+            background-color: aquamarine;
+        }
+        div ~ u{
+            background-color:yellow;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>1. Descendant Combinator (space)</h1>
+
+
+
+    <div>
+        <p>My name is Maheshwaran </p>
+        <p>My name is arun</p>
+        <i>My name is krishna</i><br><br>
+        <u>My name is sithish</u>
+        <p>My name is viswa</p>
+    </div>
+    <hr>
+
+    <h1>2. Child Combinator (>)</h1>
+    <div>
+        <section>
+            <p>My name is Maheshwaran </p>
+            <p>My name is arun</p>
+            <i>My name is krishna</i><br><br>
+            <u>My name is sithish</u>
+            <div>
+                <p>My name is Hari</p>
+            </div>
+            <p>My name is viswa</p>
+        </section>
+    </div>
+<hr>
+
+    <h1>3. Next Sibling Combinator (+)</h1>
+     <div>
+        <i>My name is Mahesh</i><br>
+        <i>My name is Hari</i><br>
+        <i>My name is naveen</i><br>
+     </div>
+        <i>My name is Akil</i><br>
+        <i>My name is Kalai</i>
+        <hr>
+
+    <h1>4. Subsequent-sibling Combinator (~)</h1>
+     <div>
+        <u>My name is Mahesh</u><br>
+        <u>My name is Hari</u><br>
+        <u>My name is naveen</u><br>
+     </div>
+        <u>My name is Akil</u><br>
+        <u>My name is Kalai</u>
+        <hr>
+
+    
+</body>
+</html>
