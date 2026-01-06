@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div1" ondblclick="textchange()" style="width: 300px;height: 100px;border: 1px solid black;padding: 20px;font-size: 30px;">Double click the text</div>
+
+</body>
+    <script>
+        function textchange(){
+            document.getElementById("div1").innerHTML="Done! Text has changed."
+            document.getElementById("div1").style.color ="red"
+        }
+    </script>
+</html>

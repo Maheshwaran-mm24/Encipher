@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <div id="box" style="height: 400px; width: 400px;border: 2px solid black;"></div>
+
+</head>
+<body>
+           <script>
+                 const box = document.getElementById("box")
+            box.addEventListener("mousemove", (e)=>{
+                let x = e.offsetX;
+                let y = e.offsetY;
+            
+                let r = x%256;
+                let g = y%256;
+                let b = (x+y)%256;
+
+                box.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+                console.log(r,g,b)
+
+
+            })
+           </script>
+</body>
+</html>

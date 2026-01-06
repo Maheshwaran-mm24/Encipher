@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <select id="sel" style="width: 200px;height: 40px;">
+        <option value="Python">Python</option>
+        <option value="Javascript">Javascript</option>
+        <option value="C++">C++</option>
+    </select>
+    
+
+    <script>
+        const s= document.getElementById("sel")
+        s.addEventListener('change', ()=>{
+            alert(s.value)
+        })
+
+    </script>
+    
+</body>
+</html>

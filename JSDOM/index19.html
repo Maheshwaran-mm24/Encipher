@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ip" >
+
+
+
+    <script>
+        element = document.getElementById("ip")
+        element.addEventListener('focus', ()=>{
+            element.style.color ="red"
+            element.style.padding = "15px"
+            element.style.border = "2px solid red"
+        })
+         element.addEventListener('blur', ()=>{
+            element.style.color ="green"
+            element.style.padding = ""
+            element.style.border = "2px solid blue"
+        })
+
+    </script>
+    
+</body>
+</html>
