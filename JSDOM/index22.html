@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ip">
+    <p id="out">Count:</p>
+</body>
+<script>
+    let ip = document.getElementById("ip")
+    let c = document.getElementById("out")
+    ip.addEventListener("input",()=>{
+    c.innerHTML = "Count: " + ip.value.length
+    })
+</script>
+</html>

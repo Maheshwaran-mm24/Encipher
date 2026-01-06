@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ip" placeholder="Enter the name ">
+    <p id="msg" style="display: none;">User is Typing.....</p>
+
+
+    <script>
+        const element = document.getElementById("ip")
+        element.addEventListener("focus",()=>{
+            document.getElementById("msg").style.display="block"
+        })
+
+        element.addEventListener("blur",()=>{
+            document.getElementById("msg").style.display="none"
+        })
+    </script>
+
+
+    
+</body>
+</html>

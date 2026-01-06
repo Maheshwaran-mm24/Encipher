@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box" style="border: 2px solid black; height: 400px;">
+        <span id="x">X</span>
+        <span id="y">Y</span>
+    </div>
+   <script>
+     const box = document.getElementById("box")
+            const x = document.getElementById("x")
+            const y = document.getElementById("y")
+            
+            box.addEventListener("mousemove" , (e)=>{
+                x.innerHTML = "x:" + e.offsetX
+               
+
+            })
+             box.addEventListener("mousemove" , (e)=>{
+                
+                y.innerHTML = "y:" + e.offsetY
+
+            })
+   </script>
+    
+</body>
+</html>

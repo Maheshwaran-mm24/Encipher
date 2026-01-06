@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prevent Parent Click Event</title>
+    <style>
+        #parent {
+            background-color: lightgreen;
+            padding: 40px;
+        }
+
+        #child {
+            background-color: lightpink;
+            padding: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="parent">
+        Parent Div
+        <div id="child">Child Div</div>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("Parent clicked");
+        });
+
+        document.getElementById("child").addEventListener("click", function (event) {
+            alert("Child clicked");
+            event.stopPropagation(); 
+        });
+    </script>
+
+</body>
+
+</html>

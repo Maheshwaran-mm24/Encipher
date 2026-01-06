@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #ip{
+            width: 300px;
+            height: 50px;
+            border: 4px solid rgb(22, 126, 211);
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <input type="text" id = 'ip' placeholder="Type the text here...">
+     <p id="out">key:</p>
+    <script>
+        const element = document.getElementById("ip")
+        element.addEventListener("keydown", function(event){
+        document.getElementById("out").innerHTML= "Key pressed: " + event.key
+    })
+</script>
+    
+</body>
+
+</html>

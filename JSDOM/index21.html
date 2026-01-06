@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ip">
+    <p  id="p">You typed:</p>
+
+
+    <script>
+        let element = document.getElementById("ip")
+        let p= document.getElementById("p")
+        element.addEventListener("keyup",()=>{
+            p.innerHTML = element.value
+        })
+    </script>
+    
+</body>
+</html>

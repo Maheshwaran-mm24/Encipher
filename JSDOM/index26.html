@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Bubbling Order</title>
+    <style>
+        #grandparent {
+            background-color: lightgray;
+            padding: 30px;
+        }
+
+        #parent {
+            background-color: lightblue;
+            padding: 30px;
+        }
+
+        #child {
+            background-color: lightcoral;
+            padding: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="grandparent"> Grandparent
+        <div id="parent">Parent
+            <div id="child">Child</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("grandparent").addEventListener("click", function () {
+            alert("Grandparent clicked");
+        });
+
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("Parent clicked");
+        });
+
+        document.getElementById("child").addEventListener("click", function () {
+            alert("Child clicked");
+        });
+    </script>
+
+</body>
+
+</html>

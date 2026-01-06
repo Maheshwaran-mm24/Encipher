@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <p id="out"></p>
+    
+</body>
+<script>
+    let btn = document.getElementById('btn')
+    let out = document.getElementById("out")
+    btn.addEventListener('click', (event)=>{
+        out.innerText = `Event type: ${event.type} || Triggerd by: ${event.target.tagName}`
+    })
+</script>
+</html>

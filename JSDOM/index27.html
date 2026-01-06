@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Stop Event Bubbling</title>
+  <style>
+    #parent {
+      background-color: lightblue;
+      padding: 40px;
+    }
+
+    #child {
+      background-color: lightcoral;
+      padding: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="parent"> Parent Div
+    <div id="child">Child Div</div>
+  </div>
+
+  <script>
+    document.getElementById("parent").addEventListener("click", function () {
+      alert("Parent clicked");
+    });
+
+    document.getElementById("child").addEventListener("click", function (event) {
+      alert("Child clicked");
+      event.stopPropagation(); 
+    });
+  </script>
+
+</body>
+
+</html>
