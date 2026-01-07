@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- -----task2------ -->
+    <!-- <button id="btn" onclick="changeback()">Click me</button> -->
+
+    <!-- -------task3------>
+    <!-- <p id="t">Time:</p>  -->
+
+    <!-- -----task4----- -->
+    <!-- <p id="p">Counter</p> -->
+
+    <!-- -----task5----- -->
+    <!-- <button id="btn" onclick="Cancelf()">Cancel</button> -->
+
+    <!-- -------task6------ -->
+    <!-- <button id="btn" onclick="Cancelf()">Cancel</button> -->
+
+    <!-- -----task7--------- -->
+    <!-- <button id="btn">Start</button> -->
+
+    <!-- ------task8-------- -->
+    <!-- <button  id="start" onclick="timer()">Start</button>
+     <button id="stop" onclick="timestop()">Stop</button> -->
+
+    <!-- ------task9------ -->
+    <!-- <ul id="my">
+        <li>Python</li>
+        <li>Javascript</li>
+        <li>C++</li>
+     </ul> -->
+
+    <!-- --------task10-------
+    <p id="p">View</p> -->
+
+    <!-- -------task12------ -->
+    <!-- <button id="btn">click</button> -->
+
+    <!-- ---------Task13--------- -->
+    <!-- <p id="text"></p> -->
+
+
+
+
+
+
+
+</body>
+
+
+<script>
+
+    // <---Task1--->
+    setTimeout(()=>{
+        alert("Hello after 3 seconds")
+    },3000)
+
+
+    // <---Task2--->
+    let btn = document.getElementById("btn")
+    function changeback(){
+        setTimeout(()=>{
+            document.body.style.backgroundColor = "blue"
+        },5000)
+    }
+
+
+    // <----Task3----->
+    setInterval(()=>{
+        const now = new Date()
+        document.getElementById("t").innerHTML= "Time: "+ now.toLocaleTimeString()
+    },1000)
+
+
+    // <--------Task4--------->
+    let count = 0
+    setInterval(()=>{
+        count++
+        document.getElementById("p").innerHTML = "Counter :" + count
+    },1000)
+
+
+    // <---------Task5--------->
+    let Cancel = document.getElementById("btn")
+    let msg = setTimeout(()=>{
+        alert("10 Seconds completed!")
+    },2000)
+    function Cancelf(){
+        clearTimeout(msg)
+    }
+
+
+    // ----------Task6-----------
+    let Cancel = document.getElementById("btn")
+    let msg = setTimeout(()=>{
+        alert("Message appears after 5 seconds")
+    },5000)
+    function Cancelf(){
+        clearTimeout(msg)
+        alert("Message cancelled!!!")
+    }
+
+
+    // ----------Task7-----------
+    let btn = document.getElementById("btn")
+    let count=0
+    let start = setInterval(()=>{
+        count++
+        btn.innerHTML = count
+        if (count==10){
+            clearInterval(start)
+        }
+    },1000)
+
+
+    // ----------Task8--------------
+    let start = document.getElementById("start")
+    let stop = document.getElementById("stop")
+    c=0
+    function timer() {
+        a=setInterval(()=>{
+        c++
+        start.innerHTML = c
+    },1000)
+    }
+    function timestop(){
+        clearInterval(a)
+    }
+
+
+    // ----------Task9-----------
+    let list = document.getElementById("my")
+    list.addEventListener("click",(event)=>{
+            event.target.style.backgroundColor = "blue"
+    })
+
+
+    // ---------Task10--------
+    let size = document.getElementById("p")
+    window.addEventListener("resize", ()=>{
+        if (window.innerWidth < 600) {
+            size.textContent = "Mobile View"
+        } else {
+            size.textContent = "Desktop View"
+        }
+    })
+
+
+    // --------Task11----------
+    const size = document.getElementById("size")
+    window.addEventListener("resize", () => {
+        console.log(innerHeight, innerWidth);
+    })
+
+
+    // -----------Task12--------
+    const btn = document.getElementById("btn");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    });
+    btn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+
+    // ---------Task13---------
+    let text = document.getElementById("text")
+    document.addEventListener("DOMContentLoaded", () => {
+        text.innerHTML = "Again this is me..,,"
+    })
+
+
+    // ----------Task14----------
+    window.addEventListener("load", () => {
+    alert("loaded");
+    });
+
+</script>
+
+</html>
