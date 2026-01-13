@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="loaddata()">data</button>
+
+
+    <table border="1" width=50%>
+        <tr>
+            <th>Userid</th>
+            <th>id</th>
+            <th>title</th>
+        </tr>
+        <tbody id="tabledata">
+
+        </tbody>
+
+
+    </table>
+
+
+
+</body>
+<script>
+//get api response
+    function loaddata() {
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET", 'https://jsonplaceholder.typicode.com/posts', true)
+
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                const data = JSON.parse(xhr.responseText)
+                console.log(data)
+                rendertable(data)
+            } else {
+                alert("Failed")
+            }
+        }
+        xhr.send()
+    }
+
+//fetch data into table
+    function rendertable(data) {
+        let row = ''
+        data.forEach((element) => {
+            row += `<tr>
+            <td>${element.userId}</td>
+            <td>${element.id}</td>
+            <td>${element.title}</td>
+            </tr>`
+        })
+
+        let tabledata = document.getElementById("tabledata")
+        tabledata.innerHTML = row
+    }
+
+
+
+
+
+
+
+</script>
+
+</html>

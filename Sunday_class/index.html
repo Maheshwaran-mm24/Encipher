@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .main{
+            padding: 30px;
+            border-radius: 30px;
+            background: radial-gradient(#EEAECA, #e585c8)
+
+        }
+
+        .ip{
+            border-radius: 20px;
+            width: 230px;
+            height: 25px;
+            font-size:10px;
+            border-color:rgb(228, 153, 153);
+            background-color: rgb(246, 197, 231);
+
+        }
+        #btn{
+            margin-left: 90px;
+            border-radius: 20px;
+            padding: 5px;
+            width: 80px;
+            background-color: rgb(121, 121, 218);
+            color: white;
+            border-color: #e585c8;
+            border: 1px solid #923f79;
+        }
+        .p{
+            margin-bottom: 2px;
+            color: rgb(100, 14, 93);
+        }
+        #btn:hover {
+        background-color: blue;
+        }
+    
+    
+
+
+    </style>
+</head>
+
+<body style="justify-items: center; background: radial-gradient(#EEAECA, #94BBE9);font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <div class="main" style=" width:260px; height: 300px; ">
+        <center><h5>Login Page</h5></center>
+        <p class="p">Username:</p>
+        <input class="ip" type="text" id="user" placeholder="Enter your username"><br><br>
+        <p class="p">Password:</p> 
+        <input class="ip" type="text" id="pass" placeholder="Enter your password here"><br><br>
+        <button id="btn" onclick="submit()">Submit</button>
+    </div>
+
+
+</body>
+<script>
+    
+    let user = document.getElementById("user")
+    let pass = document.getElementById("pass")
+    function submit(){
+        let a = user.value
+        let pattern = /^(?=.*[A-Z])\S{8,}$/
+        let usercheck = 0
+        if (!pattern.test(a)){
+            alert("atleast 8 element and one Uppercase cant contain space")
+            usercheck = 1
+        }else{
+            usercheck = 0            
+        }
+        let b = pass.value
+        let passpattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])\S{8,}$/
+
+        if (!passpattern.test(b)){
+                alert(" at least one lowercase, one upper case, one number and the special charecters of (!,@,#,$,%,?,=,*,&).")
+                passcheck = 1
+        }else{
+            passcheck=0
+        }
+        if(usercheck==0 && passcheck==0){
+            window.location.href = "index2.html"
+        }
+
+
+    }
+
+</script>
+
+</html>

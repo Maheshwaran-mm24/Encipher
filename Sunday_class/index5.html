@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="ip1" placeholder="name">
+    <input type="text" id="ip2" placeholder="domain">
+    <button onclick="postdata()">Submit</button>
+    <table border="1px" width="60%">
+        <tr>
+            <th>Name</th>
+            <th>Domain</th>
+        </tr>
+        <tbody id="tabledata">
+
+        </tbody>
+    </table>
+
+    
+    
+
+</body>
+<script>
+    function postdata(){
+        const a = new XMLHttpRequest()
+        a.open("POST",'https://jsonplaceholder.typicode.com/posts', true)
+        a.setRequestHeader("Content-type", "jsonfile")
+        
+        const data ={
+            Name:document.getElementById("ip1").value,
+            Domain:document.getElementById("ip2").value
+        }
+
+        a.onload = function(){
+            if (a.status==201){
+                const res = JSON.parse(a.responseText)
+                console.log(res)
+                rendertable(res)
+            }else{
+                alert("fail")
+            }
+        }
+        a.send(JSON.stringify(data))
+    }
+    function rendertable(res) {
+        let row = ''
+            row += `<tr>
+            <td>${res.Name}</td>
+            <td>${res.Domain}</td>
+            <td>${res.title}</td>
+            </tr>`
+
+        let tabledata = document.getElementById("tabledata")
+        tabledata.innerHTML = row
+    }
+
+
+
+</script>
+</html>
