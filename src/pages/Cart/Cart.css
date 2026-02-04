@@ -1,0 +1,31 @@
+
+
+.buyNow-btn {
+  padding: 10px 16px;
+  margin: 0 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3f9c1d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyNow-btn:hover {
+  background-color: #d8cc1d;
+  transform: scale(1.05);
+}
+.clear-btn {
+  padding: 10px 16px;
+  margin: 0 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e63946;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.clear-btn:hover {
+  background-color: #a61d2e;
+  transform: scale(1.05);
+}
